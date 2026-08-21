@@ -24,6 +24,15 @@ app.get("/users/:id", (req, res) => {
   });
 });
 
+app.get("/test/:id", (req, res) => {
+  const { id } = req.params;
+
+  res.json({
+    id,
+    name: "Test User",
+    architecture: "monolith"
+  });
+});
 
 app.get("/users1/:id", async (req, res) => {
   const { id } = req.params;
